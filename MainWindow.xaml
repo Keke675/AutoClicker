@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoClicker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="AutoClicker v1.0" Height="465" Width="815" MaxHeight="465" MinHeight="465" MinWidth="815" MaxWidth="815" WindowStartupLocation="CenterScreen">
+    <Grid Name="MainGrid" Background="#FF00FF74" Width="800" Height="450" HorizontalAlignment="Left" Margin="0,0,0,-1" MouseUp="Grid_Up">
+        <Rectangle HorizontalAlignment="Center" Height="50" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="#FFCDCDCD"/>
+        <Label Content="AutoClicker V1.0 release 04/10/22" HorizontalAlignment="Left" VerticalAlignment="Top" Height="38" Cursor="Hand" FontSize="22" Margin="49,6,0,0" />
+        <Image Margin="4,-2,750,398" Stretch="Uniform" Source="/images/mouse.png" Cursor="Arrow"/>
+        <Rectangle HorizontalAlignment="Left" Height="150" Margin="10,60,0,0" Stroke="Black" VerticalAlignment="Top" Width="381" Fill="#FFF7F7F7"/>
+        <Rectangle HorizontalAlignment="Left" Height="150" Margin="409,60,0,0" Stroke="Black" VerticalAlignment="Top" Width="381" Fill="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="200" Margin="409,217,0,0" Stroke="Black" VerticalAlignment="Top" Width="381" Fill="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="200" Margin="10,217,0,0" Stroke="Black" VerticalAlignment="Top" Width="381" Fill="White"/>
+        <Button Content="Enable" HorizontalAlignment="Left" Margin="506,371,0,0" VerticalAlignment="Top" Height="34" Width="188" Click="Button_Click" Cursor="Hand" Visibility="Hidden" Name="enable_btn"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="474,295,0,0" VerticalAlignment="Top" Width="252" HorizontalContentAlignment="Center" Name="key_trigger_label"/>
+        <ComboBox HorizontalAlignment="Left" Margin="474,266,0,0" VerticalAlignment="Top" Width="252" SelectionChanged="ComboBox_SelectionChanged" Name="ListBox_Key" Cursor="Hand">
+            <ComboBoxItem>Shift</ComboBoxItem>
+            <ComboBoxItem>Ctrl</ComboBoxItem>
+            <ComboBoxItem>Alt</ComboBoxItem>
+            <ComboBoxItem>Windows</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Key Trigger" HorizontalAlignment="Left" Margin="409,217,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Select a key" HorizontalAlignment="Left" Margin="469,246,0,0" VerticalAlignment="Top" FontFamily="Arial"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="474,333,0,0" VerticalAlignment="Top" Width="252" HorizontalContentAlignment="Center" Name="unable_label"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="474,327,0,0" Stroke="Black" VerticalAlignment="Top" Width="252" Visibility="Hidden" Name="border_rectangle"/>
     </Grid>
 </Window>
